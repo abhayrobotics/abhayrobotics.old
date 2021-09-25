@@ -1,0 +1,10 @@
+1. Sip calculator
+add increment 
+add inflation
+add exit load 
+final redemption value 
+with xirr
+ 
+
+
+7. compare emi with interest difference

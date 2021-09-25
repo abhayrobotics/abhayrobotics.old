@@ -11,7 +11,32 @@
         <div class="heading">
             <h2>Financial Calculator</h2>
         </div>
+        <form >
+            <h3> Monthly Investment Amount (INR)</h3><input type="text" required name="amount" id="amount">
+            <h3> Expected Rate of Return (% per annum)</h3><input type="text" required name="rate" id="rate">
+            <h3> Tenure (in years) </h3><input type="text" name="tenure" required id="time">
+
+            <button>Plan my Wealth</button>
+            <div id="test"></div>
+        </form>
+        
     </section>
-    
+    <script>
+        let m= Math;
+        let url = window.location.href;
+        var items =url.split('?');
+        console.log(items[1]);
+        
+        let p = parseInt(items[1].split("&")[0].split("=")[1]);
+        let r = parseInt(items[1].split("&")[1].split("=")[1]) /1200;
+        let t = parseInt(items[1].split("&")[2].split("=")[1]) *12;
+        console.log(p,r,t);
+        
+        // let sip = p*(Math.pow((1+r),t) -1 )*(1+r)/r;
+        let sip = p* ( (Math.pow((1+r),t)) -1)*(1+r)/r;
+        sip = Math.round(sip)
+        document.getElementById('test').innerHTML =sip;
+
+    </script>
 </body>
 </html>
