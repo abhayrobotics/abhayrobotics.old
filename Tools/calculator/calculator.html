@@ -5,20 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator | Abhay kumar </title>
-</head>
+    <!-- ** Bootstarp -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
 <body>
-    <section>
-        <div class="heading">
+    <section  class="container">
+        <div class="heading my-3">
             <h2>Financial Calculator</h2>
         </div>
-        <form >
-            <h3> Monthly Investment Amount (INR)</h3><input type="text" required name="amount" id="amount">
-            <h3> Expected Rate of Return (% per annum)</h3><input type="text" required name="rate" id="rate">
-            <h3> Tenure (in years) </h3><input type="text" name="tenure" required id="time">
+        <form class="my-4" >
+            <h4 class="my-3"> Monthly Investment Amount (INR)</h4><input type="text" required name="amount"  placeholder="5000" id="amount">
+            <h4 class="my-3"> Expected Rate of Return (% per annum)</h4><input type="text" required name="rate" placeholder="12" id="rate">
+            <h4  class="my-3"> Tenure (in years) </h4><input type="text" name="tenure" required placeholder="5" id="time">
 
-            <button>Plan my Wealth</button>
-            <div id="test"></div>
+            <button class="btn btn-success">Plan my Wealth</button>
         </form>
+        <div class="result">
+            <h5>Total Future Value amounts to Rs.</h5>
+            <span id="sip"></span>
+            <span id="principal"></span>
+            <span id="interest"></span>
+            <h5 class="my-3">Total Future Value with increment  amounts to Rs.</h5> <span id="sip"></span>
+        </div>
         
     </section>
     <script>
@@ -26,16 +34,26 @@
         let url = window.location.href;
         var items =url.split('?');
         console.log(items[1]);
+       
         
         let p = parseInt(items[1].split("&")[0].split("=")[1]);
         let r = parseInt(items[1].split("&")[1].split("=")[1]) /1200;
         let t = parseInt(items[1].split("&")[2].split("=")[1]) *12;
         console.log(p,r,t);
         
-        // let sip = p*(Math.pow((1+r),t) -1 )*(1+r)/r;
+        // ** Normal SIP calculation
         let sip = p* ( (Math.pow((1+r),t)) -1)*(1+r)/r;
-        sip = Math.round(sip)
-        document.getElementById('test').innerHTML =sip;
+
+        // ** SIP  with increment 
+        
+
+        sip = Math.round(sip);
+        let principal = p*t;
+        let interest = sip- principal;
+
+        document.getElementById('sip').innerHTML =sip;
+        document.getElementById('principal').innerHTML =principal;
+        document.getElementById('interest').innerHTML =interest;
 
     </script>
 </body>
