@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile first</title>
+
+    <!-- * Swipper -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+
+    <!-- *icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- * Core CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+</head>
+
+<body>
+    <!-- Dark theme -->
+
+    <!-- * Navigation Menu************************************* -->
+    <section class="header ">
+        <nav>
+            <ul class="navigation" id="navigation" onclick="closeMenu()">
+                <li class="menu">
+                    <a href="#home">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <h2>Home</h2>
+                    </a>
+                </li>
+                <li class="menu"><a href="#about">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <h2>About</h2>
+                    </a></li>
+                <li class="menu"><a href="#skills">
+                        <ion-icon name="code-outline"></ion-icon>
+                        <h2>Skills</h2>
+                    </a></li>
+                <li class="menu"><a href="#qualification">
+                        <ion-icon name="briefcase-outline"></ion-icon>
+                        <h2>Qualification</h2>
+                    </a></li>
+                <li class="menu"><a href="#portfolio">
+                        <ion-icon name="image-outline"></ion-icon>
+                        <h2>Portfolio</h2>
+                    </a></li>
+                <li class="menu"><a href="#contact">
+                        <ion-icon name="send-outline"></ion-icon>
+                        <h2>Contact</h2>
+                    </a></li>
+            </ul>
+
+            <!--*************************** Navbar -->
+            <div class="navbar">
+                <h2>Alexa</h2>
+                <div class="apps">
+
+                    <ion-icon class="" name="moon-outline" onclick="themeMoon()" id="moon"></ion-icon>
+                    
+                    <ion-icon name="sunny-outline" onclick="themeSun()" id="sun"></ion-icon>
+                    
+
+                    <ion-icon onclick="openMenu()" name="apps-outline" id="app"></ion-icon>
+                    <ion-icon onclick="closeMenu()" name="close-outline" id="closeBtn"></ion-icon>
+                </div>
+
+            </div>
+        </nav>
+    </section>
+
+    <!--* Hero Section*****************************************-->
+    <section class="hero-section   d" id="home">
+        <div class="photo">
+            <div class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+                <ion-icon name="logo-linkedin"></ion-icon>
+                <ion-icon name="logo-youtube"></ion-icon>
+
+            </div>
+            <div class="hero-text big-screen">
+                <h2>Hi, I'm Alexa</h2>
+                <h3>Full Stack Web Developer</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At veritatis voluptas et tenetur</p>
+
+                
+                <a href="#about">
+                    <div class="btn explore">
+                    Explore 
+                    </div>
+                </a>
+            </div>
+
+            <svg class="blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <mask id="mask0" mask-type="alpha">
+                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                </mask>
+                <g mask="url(#mask0)">
+                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                    <image href="./assets/img/perfil.png">
+                </g>
+            </svg>
+
+        </div>
+
+        <div class="hero-text small-screen">
+            <h2>Hi, I'm Alexa</h2>
+            <h3>Full Stack Web Developer</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At veritatis voluptas et tenetur</p>
+            <div class="btn explore">
+                <a href="#about">Explore </a>
+            </div>
+        </div>
+
+        <ion-icon name="chevron-down-outline"></ion-icon>
+
+    </section>
+
+
+    <!--* About Section*****************************************-->
+    <section id="about" class="about margin-t-50 ">
+
+        <div class="heading">
+            <h2>About Me </h2>
+            <p>My Introduction</p>
+        </div>
+
+        <img src="./assets/img/about.jpg" alt="">
+
+        <div class="about-text">
+
+            <p>I am a passionate Full stack Web Developer and a robotics enthusiast. I enjoy creating unique ,
+                visually
+                attractive design.</p>
+
+            <div class="counter-box">
+                <div class="counter">
+                    <h2>02+</h2>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="counter">
+                    <h2>20+</h2>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="counter">
+                    <h2>10+</h2>
+                    <p>Clients Worked</p>
+                </div>
+
+            </div>
+            <div class="btn"><a href="./assets/pdf/Alexa-Cv.pdf" download>Download CV<ion-icon name="download-outline">
+                    </ion-icon></a></div>
+
+        </div>
+    </section>
+
+    <!--* Skills Section Percentage analysis**************-->
+    <section class="skills  margin-t-50" id="skills">
+        <div class="skill-box">
+
+            <div class="heading">
+                <h2>Skills </h2>
+                <p>My Technical Level</p>
+            </div>
+            <div class="skill-cat">
+                <div class="frontend">
+                    <div class="skill-text">
+
+                        <h2>{ }</h2>
+                        <div id="sub-head1" onclick="frontend_skills()">
+                            <h2>Frontend Developer </h2>
+                            <p>More than 2 years</p>
+                        </div>
+                        <ion-icon name="chevron-down-outline" id="down" class=" "></ion-icon>
+                        <ion-icon name="chevron-up-outline" id="up" class="up active-arrow"></ion-icon>
+                    </div>
+                    <div class="skill-score active-skill" id="skill-score1">
+                        <div class="percent">
+                            <div class="percent-text">
+                                <h2>HTML</h2>
+                                <p>90%</p>
+                            </div>
+                            <div class="bar html-bar"></div>
+                        </div>
+                        <div class="percent">
+                            <div class="percent-text">
+                                <h2>CSS</h2>
+                                <p>85%</p>
+                            </div>
+                            <div class="bar  css-bar"></div>
+                        </div>
+                        <div class="percent">
+                            <div class="percent-text">
+                                <h2>JavaScript</h2>
+                                <p>75%</p>
+                            </div>
+                            <div class="bar javascript-bar"></div>
+                        </div>
+                        <div class="percent">
+                            <div class="percent-text">
+                                <h2>React</h2>
+                                <p>80%</p>
+                            </div>
+                            <div class="bar react-bar"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="backend">
+                    <div class="skill-text">
+
+                        <ion-icon class="active-arrow" name="file-tray-stacked"></ion-icon>
+
+                        <div id="sub-head2" onclick="backend_skills()">
+                            <h2>Backend Developer </h2>
+                            <p>More than 1 year</p>
+                        </div>
+                        <ion-icon name="chevron-down-outline" id="down2" class=" active-arrow"></ion-icon>
+                        <ion-icon name="chevron-up-outline" id="up2" class="up "></ion-icon>
+                    </div>
+                    <div class="skill-score" id="skill-score2">
+                        <div class="percent">
+                            <div class="percent-text">
+                                <h2>Python</h2>
+                                <p>85%</p>
+                            </div>
+                            <div class="bar python-bar"></div>
+                        </div>
+                        <div class="percent">
+                            <div class="percent-text">
+
+                                <h2>Django</h2>
+                                <p>80%</p>
+                            </div>
+                            <div class="bar  django-bar"></div>
+                        </div>
+                        <div class="percent">
+                            <div class="percent-text">
+                                <h2>Firebase</h2>
+                                <p>70%</p>
+                            </div>
+                            <div class="bar firebase-bar"></div>
+                        </div>
+                        <div class="percent">
+                            <div class="percent-text">
+                                <h2>SQLite</h2>
+                                <p>75%</p>
+                            </div>
+                            <div class="bar sqlite-bar"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="design">
+                    <div class="skill-text">
+
+                        <ion-icon class="active-arrow" name="eyedrop-outline"></ion-icon>
+
+                        <div id="sub-head2" onclick="design_skills()">
+                            <h2>Designer </h2>
+                            <p>More than 1 year</p>
+                        </div>
+                        <ion-icon name="chevron-down-outline" id="down3" class=" active-arrow"></ion-icon>
+                        <ion-icon name="chevron-up-outline" id="up3" class="up "></ion-icon>
+                    </div>
+                    <div class="skill-score" id="skill-score3">
+                        <div class="percent">
+                            <div class="percent-text">
+                                <h2>Sketch</h2>
+                                <p>80%</p>
+                            </div>
+                            <div class="bar sketch-bar"></div>
+                        </div>
+                        <div class="percent">
+                            <div class="percent-text">
+
+                                <h2>Photoshop</h2>
+                                <p>85%</p>
+                            </div>
+                            <div class="bar  photoshop-bar"></div>
+                        </div>
+                        <div class="percent">
+                            <div class="percent-text">
+                                <h2>Logo Design</h2>
+                                <p>85%</p>
+                            </div>
+                            <div class="bar logo-design-bar"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!--* Qualification Section -->
+
+    <section class="qualification  margin-t-50" id='qualification'>
+
+        <div class="heading">
+            <h2>Qualification </h2>
+            <p>My Personal Journey</p>
+        </div>
+
+        <div class="category-box">
+            <div class="education active-tab" onclick="showQualification('education')">
+                <ion-icon name="ribbon-outline"></ion-icon>
+                <h2>Education</h2>
+            </div>
+            <div class="work" onclick="showQualification('work')">
+                <ion-icon name="briefcase-outline"></ion-icon>
+                <h2>Work</h2>
+            </div>
+        </div>
+
+        <div class="both-timeline">
+
+            <!--* Education details **************************-->
+            <div class="timeline qualification-active" id="education-tab">
+                <div class="course">
+                    <div class="course-data">
+                        <h3>Electrical Engineering</h3>
+                        <p>Techno India | University</p>
+                        <div class="date">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                            <p>2012-2016</p>
+                        </div>
+                    </div>
+                    <div class="data-line">
+                        <div class="rounder"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="blank"></div>
+                </div>
+                <div class="course">
+
+                    <div class="blank">
+
+                    </div>
+                    <div class="data-line">
+                        <div class="rounder"></div>
+                        <div class="line"></div>
+                    </div>
+
+
+                    <div class="course-data">
+                        <h3>Frontend Developer</h3>
+                        <p>Texas | University</p>
+                        <div class="date">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                            <p>2016-2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-data">
+                        <h3>UI/UX Designing</h3>
+                        <p>Texas | University</p>
+                        <div class="date">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                            <p>2018-2019</p>
+                        </div>
+                    </div>
+                    <div class="data-line">
+                        <div class="rounder"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="course">
+
+                    <div class="blank">
+
+                    </div>
+                    <div class="data-line">
+                        <div class="rounder"></div>
+                        <!-- <div class="line"></div> -->
+                    </div>
+
+
+                    <div class="course-data">
+                        <h3>Backend Developer</h3>
+                        <p> Coursera | Online Learning</p>
+                        <div class="date">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                            <p>2019-2020</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- *work Timeline****************************************** -->
+            <div class="timeline" id="work-tab">
+                <div class="course">
+                    <div class="course-data">
+                        <h3>Software Engineer</h3>
+                        <p>Microsoft | Peru</p>
+                        <div class="date">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                            <p>2016-2018</p>
+                        </div>
+                    </div>
+                    <div class="data-line">
+                        <div class="rounder"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="blank"></div>
+                </div>
+                <div class="course">
+
+                    <div class="blank">
+
+                    </div>
+                    <div class="data-line">
+                        <div class="rounder"></div>
+                        <div class="line"></div>
+                    </div>
+
+
+                    <div class="course-data">
+                        <h3>Frontend Developer</h3>
+                        <p>Texas | University</p>
+                        <div class="date">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                            <p>2016-2018</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course">
+                    <div class="course-data">
+                        <h3>UI/UX Designing</h3>
+                        <p>Texas | University</p>
+                        <div class="date">
+                            <ion-icon name="calendar-number-outline"></ion-icon>
+                            <p>2018-2019</p>
+                        </div>
+                    </div>
+                    <div class="data-line">
+                        <div class="rounder"></div>
+                        <!-- <div class="line"></div> -->
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <!--* Portfolio Section******************************************-->
+    <section class="portfolio margin-t-50" id="portfolio">
+
+        <div class="heading">
+            <h2>Portfolio </h2>
+            <p>Most Recent Work</p>
+        </div>
+
+        <!-- * *******Swiper2 -->
+        <div class="swiper-container mySwiper2">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="portfolio1">
+                        <img src="./assets/img/portfolio1.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h3>Modern Website</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias ex sapiente
+                                accusantium!</p>
+                        </div>
+                        <div class="btn">Read More</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="portfolio1">
+                        <img src="./assets/img/portfolio2.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h3>Brand Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias ex sapiente
+                                accusantium!</p>
+                        </div>
+                        <div class="btn">Read More</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="portfolio1">
+                        <img src="./assets/img/portfolio3.jpg" alt="">
+                        <div class="portfolio-text">
+                            <h3>Responsive Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestias ex sapiente
+                                accusantium!</p>
+                        </div>
+                        <div class="btn">Read More</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- <div class="swiper-pagination2"></div> -->
+        </div>
+    </section>
+
+    <!-- *Contact-add********************************************* -->
+    <section class="contact-add ">
+
+        <div class="add-text">
+            <h2>You have a new Project</h2>
+            <h3>Contact me now and get exiting offers on your new Projects !</h3>
+        </div>
+        <div>
+            <a href="#contact" class="contact-btn">
+                <h3>Contact</h3>
+                <ion-icon name="send"></ion-icon>
+            </a>
+        </div>
+        <img src="./assets/img/project.png" alt="">
+    </section>
+
+    <!--* Testimonial Section******************************************-->
+    <section class="client-testimonial">
+        <div class="heading">
+            <h2>Testimonials </h2>
+            <p>My Client saying</p>
+        </div>
+
+
+        <!-- Swiper -->
+
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial">
+
+                        <div class="quote">
+                            <i class="fa fa-quote-left quote-icon"></i>
+                        </div>
+                        <p>You made it so simple. My new site is so much faster and easier to work with than my old
+                            site. <br>
+                            Thanks, guys!</p>
+                        <div class="client">
+                            <img src="./assets/img/testimonial1.jpg" alt="">
+                        </div>
+                        <h4>Harris Patel</h4>
+                        <h5>Managing Director, Amazon</h5>
+                        <div class="star">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial">
+
+                        <div class="quote">
+                            <i class="fa fa-quote-left quote-icon"></i>
+                        </div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat officia dignissimos
+                            quaerat.
+                            Dolor, porro ex.</p>
+                        <div class="client">
+                            <img src="./assets/img/testimonial2.jpg" alt="">
+                        </div>
+                        <h4>Rucheta Dalal</h4>
+                        <h5>Managing Director, Amazon</h5>
+                        <div class="star">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial">
+
+                        <div class="quote">
+                            <i class="fa fa-quote-left quote-icon"></i>
+                        </div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat officia dignissimos
+                            quaerat.
+                            Dolor, porro ex.</p>
+                        <div class="client">
+                            <img src="./assets/img/testimonial3.jpg" alt="">
+                        </div>
+                        <h4>BayMax</h4>
+                        <h5>Actor, Big Hero 6</h5>
+                        <div class="star">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+    </section>
+
+    <!-- *********Contact Page*************************** -->
+    <section class="contact" id="contact">
+
+        <div class="heading">
+            <h2>Contact Me </h2>
+            <p>Get in touch</p>
+        </div>
+        <div class="contact-details">
+
+            <!-- *contact-info -->
+            <div class="contact-box">
+
+                <div class="contact-via">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <div class="contact-text">
+                        <h2>Call Me</h2>
+                        <p>+91-7127-765-765</p>
+                    </div>
+                </div>
+                <div class="contact-via">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <div class="contact-text">
+                        <h2>E-mail</h2>
+                        <p>alexa@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-via">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <div class="contact-text">
+                        <h2>Location</h2>
+                        <p>42/3 B Part Street, <br>Kolkata, India</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- *contact form -->
+            <div class="contact-form">
+                <form action="#" method="">
+                    <input type="text" name="name" required placeholder="Your Name">
+                    <input type="email" name="name" required placeholder="Your E-mail">
+                    <input type="text" name="name" required placeholder="Title of work">
+                    <textarea type="text" rows="5" required column="500" name="name" maxlength="500"
+                        placeholder="Your message ..."></textarea>
+
+                    <div class="btn" type="submit">Send Message <ion-icon name="send"></ion-icon>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- *footer section************************************ -->
+    <section class="footer">
+        <h2>Alexa</h2>
+
+        <h3>Full stack Web Developer</h3>
+        <div class="social-link">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <ion-icon name="logo-youtube"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+        <div class="copyright">Copyright &copy; 2021 | All rights reserved </div>
+
+    </section>
+
+    <!-- *Swiper JS -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

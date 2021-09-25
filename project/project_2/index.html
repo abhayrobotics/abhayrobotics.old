@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Clone</title>
+
+    <!-- * Font awesome Icon -->
+    <link rel="stylesheet" href="../sources/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!--*************************** Core CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ***************************************Header -->
+    <header>
+        <section class="navbar" id="top-nav">
+            <div class="logo">
+                <h1>PORTFOLIO</h1>
+
+            </div>
+            <nav>
+                <ul class="main-menu">
+                    <li class="menu"><a href="./index.html">Home<i class="fa fa-angle-down"></i></a> </li>
+                    <li class="menu"><a href="#">Portfolio<i class="fa fa-angle-down"></i></a> </li>
+                    <li class="menu"><a href="#">Structure<i class="fa fa-angle-down"></i></a></li>
+                    <li class="menu"><a href="#">Pages<i class="fa fa-angle-down"></i></a></li>
+                    <li class="menu"><a href="#">Blog<i class="fa fa-angle-down"></i></a></li>
+                    <li class="menu"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <!-- *****************************************Hero section -->
+    <section class="container">
+        <div class="hero">
+            <div class="text">
+                <h1>Hello ...</h1>
+                <h2>I am Mike Hardson</h2>
+                <h3>Web Designer and Personal Portfolio Developer</h3>
+                <div class="btn"><a href="#"> About Me <i class="fa fa-long-arrow-right"></i></a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***************************Photos************************* -->
+    <section class="photo-section pad-t-80">
+
+        <!-- *filter Buttons -->
+        <div class="filter-cat">
+            <ul>
+                <li class="filter active" id="filter " onclick="filterOut('All')">All</li>
+                <li class="filter " onclick="filterOut('Graphic')">Graphic</li>
+                <li class="filter" onclick="filterOut('Photography')">Photography</li>
+                <li class="filter" onclick="filterOut('Coding')">Coding</li>
+                <li class="filter " onclick="filterOut('Branding')">Branding</li>
+            </ul>
+        </div>
+        <!-- * All photos -->
+        <div class="photos">
+            <div class="img">
+                <img class="filter_img Photography " src="./img/5.jpg" alt="">
+                <div class="img-desc">
+                    <h2>Project Title</h2>
+                    <h3 class="btn">Client Name</h3>
+                </div>
+            </div>
+            <div class="img">
+                <img class="filter_img Coding " src="./img/2.jpg" alt="">
+                <div class="img-desc">
+                    <h2>Project Title</h2>
+                    <h3 class="btn">Client Name</h3>
+                </div>
+            </div>
+            <div class="img">
+                <img class="filter_img Graphic " src="./img/3.jpg" alt="">
+                <div class="img-desc">
+                    <h2>Project Title</h2>
+                    <h3 class="btn">Client Name</h3>
+                </div>
+            </div>
+            <div class="img">
+                <img class="filter_img Photography " src="./img/4.jpg" alt="">
+                <div class="img-desc">
+                    <h2>Project Title</h2>
+                    <h3 class="btn">Client Name</h3>
+                </div>
+            </div>
+            <div class="img">
+                <img class="filter_img Coding " src="./img/1.jpg" alt="">
+                <div class="img-desc">
+                    <h2>Project Title</h2>
+                    <h3 class="btn">Client Name</h3>
+                </div>
+            </div>
+            <div class="img">
+                <img class="filter_img Branding " src="./img/6.jpg" alt="">
+                <div class="img-desc">
+                    <h2>Project Title</h2>
+                    <h3 class="btn">Client Name</h3>
+                </div>
+            </div>
+            <div class="img">
+                <img class="filter_img Graphic " src="./img/7.jpg" alt="">
+                <div class="img-desc">
+                    <h2>Project Title</h2>
+                    <h3 class="btn">Client Name</h3>
+                </div>
+            </div>
+            <div class="img">
+                <img class="filter_img Photography " src="./img/8.jpg" alt="">
+                <div class="img-desc">
+                    <h2>Project Title</h2>
+                    <h3 class="btn">Client Name</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="btn pad-t-80"><a href="#"> View More <i class="fa fa-long-arrow-right"></i></a></div>
+
+    </section>
+
+    <!-- *Services Cards****************************************** -->
+    <section class="cards-section pad-t-80">
+        <div class="card">
+            <div class="svg">
+                <div class=" fa fa-laptop card-icon"></div>
+            </div>
+            <h2>UI/UX Design</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint nihil deleniti
+            </p>
+        </div>
+        <div class="card">
+            <div class="svg">
+
+                <div class=" fa fa-heart card-icon"></div>
+            </div>
+            <h2>Minimal Design</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint nihil deleniti
+            </p>
+        </div>
+        <div class="card">
+            <div class="svg">
+                <div class=" fa fa-map card-icon"></div>
+            </div>
+            <h2>API Integration</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint nihil deleniti
+            </p>
+        </div>
+        <div class="card">
+            <div class="svg">
+                <div class=" fa fa-paper-plane card-icon"></div>
+            </div>
+            <h2>Responsive Design</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint nihil deleniti
+            </p>
+        </div>
+        <div class="card">
+            <div class="svg">
+
+                <div class=" fa fa-laptop card-icon"></div>
+            </div>
+            <h2>Pixel Precision</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint nihil deleniti
+            </p>
+        </div>
+        <div class="card">
+            <div class="svg">
+                <div class=" fa fa-quote-right card-icon"></div>
+            </div>
+            <h2>Interactive ELements</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint nihil deleniti
+            </p>
+        </div>
+
+
+    </section>
+    <!-- ****************************Testimonials********** -->
+    <section>
+        <!-- Swiper -->
+    <div class="swiper-container mySwiper pad-t-80">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="testimonial">
+                    
+                    <div class="quote">
+                        <i class="fa fa-quote-left quote-icon"></i>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat officia dignissimos quaerat.
+                        Dolor, porro ex.</p>
+                    <div class="client">
+                        <img src="./img/testimonial1.jpg" alt="">
+                    </div>
+                    <h4>Harris Patel</h4>
+                    <h5>Managing Director, Amazon</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial">
+                    
+                    <div class="quote">
+                        <i class="fa fa-quote-left quote-icon"></i>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat officia dignissimos quaerat.
+                        Dolor, porro ex.</p>
+                    <div class="client">
+                        <img src="./img/testimonial2.jpg" alt="">
+                    </div>
+                    <h4>Rucheta Dalal</h4>
+                    <h5>Managing Director, Amazon</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial">
+                    
+                    <div class="quote">
+                        <i class="fa fa-quote-left quote-icon"></i>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat officia dignissimos quaerat.
+                        Dolor, porro ex.</p>
+                    <div class="client">
+                        <img src="./img/testimonial3.jpg" alt="">
+                    </div>
+                    <h4>BayMax</h4>
+                    <h5>Actor, Big Hero 6</h5>
+                    <div class="star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    </section>
+    <!-- **********************************************Footer***************************** -->
+    <footer >
+        <div class="copyright">
+            <p>Copyright <i class="fa fa-copyright"></i> 2020-21 All Rights Reserved</p>
+        </div>
+        <div class="social">
+            <div class="social-icon">
+                <a href="#">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </div>
+            <div class="social-icon">
+                <a href="#">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </div>
+            <div class="social-icon">
+                <a href="#">
+                    <i class="fa fa-skype"></i>
+                </a>
+            </div>
+            <div class="social-icon">
+                <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="social-icon">
+                <a href="#">
+                    <i class="fa fa-youtube"></i>
+                </a>
+            </div>
+            <a href="#top-nav">
+                <div class="top "><i class="fa fa-chevron-up"></i></div>
+            </a>
+        </div>
+    </footer>
+
+ <!-- Swiper JS -->
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+ <!-- Initialize Swiper -->
+ <script>
+     var swiper = new Swiper(".mySwiper", {
+         slidesPerView: 1,
+         spaceBetween: 30,
+         keyboard: {
+             enabled: true
+         },
+         pagination: {
+             el: ".swiper-pagination",
+             clickable: true
+         },
+         navigation: {
+             nextEl: ".swiper-button-next",
+             prevEl: ".swiper-button-prev"
+         }
+     });
+ </script>
+    <script src="./JS/script.js"></script>
+</body>
+
+</html>
