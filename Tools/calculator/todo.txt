@@ -1,6 +1,6 @@
 1. Sip calculator - done
 add increment - done
-add inflation
+add inflation- done
 
 final redemption value 
 with xirr
