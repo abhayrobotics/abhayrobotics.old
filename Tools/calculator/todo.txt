@@ -1,7 +1,7 @@
-1. Sip calculator
-add increment 
+1. Sip calculator - done
+add increment - done
 add inflation
-add exit load 
+
 final redemption value 
 with xirr
  

@@ -17,15 +17,24 @@
             <h4 class="my-3"> Monthly Investment Amount (INR)</h4><input type="text" required name="amount"  placeholder="5000" id="amount">
             <h4 class="my-3"> Expected Rate of Return (% per annum)</h4><input type="text" required name="rate" placeholder="12" id="rate">
             <h4  class="my-3"> Tenure (in years) </h4><input type="text" name="tenure" required placeholder="5" id="time">
+            <h4  class="my-3"> Yearly increment (%) </h4><input type="text" name="topup" placeholder="10 (optional)" id="topup">
+            <h4  class="my-3"> Inflation rate (%) </h4><input type="text" name="infaltion" placeholder="6 (optional)" id="topup">
 
             <button class="btn btn-success">Plan my Wealth</button>
         </form>
         <div class="result">
             <h5>Total Future Value amounts to Rs.</h5>
-            <span id="sip"></span>
-            <span id="principal"></span>
-            <span id="interest"></span>
-            <h5 class="my-3">Total Future Value with increment  amounts to Rs.</h5> <span id="sip"></span>
+            <div id="sip"></div>
+            <div id="principal"></div>
+            <div id="interest"></div>
+
+            <h5 class="my-3">Total Future Value with increment  amounts to Rs.</h5> 
+            <div id="step_up_sip"></div>
+            <div id="total_investment"></div>
+            <div id="step_up_interest"></div>
+        </div>
+        <div class="inflation">
+            <div><h4>Adjusting with Inflation : </h4> </div>
         </div>
         
     </section>
@@ -39,22 +48,78 @@
         let p = parseInt(items[1].split("&")[0].split("=")[1]);
         let r = parseInt(items[1].split("&")[1].split("=")[1]) /1200;
         let t = parseInt(items[1].split("&")[2].split("=")[1]) *12;
-        console.log(p,r,t);
-        
-        // ** Normal SIP calculation
-        let sip = p* ( (Math.pow((1+r),t)) -1)*(1+r)/r;
+        let topup = parseInt(items[1].split("&")[3].split("=")[1])/100;
+        let inflation = parseInt(items[1].split("&")[3].split("=")[1])/100;
 
-        // ** SIP  with increment 
+        // console.log(p,r,t,topup);
         
+
+        function sipfunc(p,r,t){
+            var sip = p* ( (Math.pow((1+r),t)) -1)*(1+r)/r;
+            return sip
+        }
+
+        // ** Normal SIP calculation
+        let sip = sipfunc(p,r,t);
 
         sip = Math.round(sip);
         let principal = p*t;
         let interest = sip- principal;
 
+        // output
         document.getElementById('sip').innerHTML =sip;
         document.getElementById('principal').innerHTML =principal;
         document.getElementById('interest').innerHTML =interest;
+      
+        // ** SIP  with increment 
+        function step_up_sip_func(p,r,t,topup){
 
+            let step_up_sip = 0
+            
+            total_time = t;
+            let initial_p = p
+            // without increment main value
+            step_up_sip = sipfunc(p,r,t); 
+            let total_investment =p*12
+            // console.log(total_investment)
+            
+            // for future year with only incremented value
+            // t=total_time- 12;
+            for(t=total_time- 12;t>0; t=t-12){
+
+                let partial_p= p*topup;
+                
+                let additionalvalue = sipfunc(partial_p,r,t);
+                step_up_sip = step_up_sip + additionalvalue
+                // console.log(step_up_sip, p ,t)
+                // principal for next year
+                p=  p+partial_p;
+                total_investment =total_investment + p*12;
+                // console.log(total_investment,partial_p)
+            }
+            step_up_sip = Math.round(step_up_sip)
+
+            let step_up_interest = step_up_sip- total_investment
+            step_up_interest = Math.round(step_up_interest)
+            total_investment = Math.round(total_investment)
+
+            console.log(step_up_sip,total_investment, step_up_interest)
+
+            document.getElementById('step_up_sip').innerHTML =step_up_sip;
+            document.getElementById('total_investment').innerHTML =total_investment;
+            document.getElementById('step_up_interest').innerHTML =step_up_interest;
+        }
+        step_up_sip_func(p,r,t,topup)
+
+        // inflation 
+        function inflationFunc(p,inflation,t,){
+            // yearly inflation
+            t= t/12; 
+            console.log((p,inflation,t))
+            let inflatedValue = p/( (Math.pow((1+inflation),t)))
+            console.log(inflatedValue)
+        }
+        inflationFunc(p,inflation,t)
     </script>
 </body>
 </html>
