@@ -1,0 +1,121 @@
+:root{
+    /** primary color */
+    --color-p : #37d610;
+    --color-p : #f03c72;
+    --color-p : #ffc000 ;
+    --color-p : #dacbea;
+    /** Secondary Color */
+    --color-s1 : #fff;
+   
+    /* *Ascent color */
+    --border-color: rgba(0,0,0,0.4);
+    --rating-color: #ff9800;
+
+    --font-fam1: 'Poppins', sans-serif;
+    --font-fam2: "open-sans";
+    --icon-size : 30px;
+
+    /* **** custom variable */
+    --3d-size: 0.6;
+}
+*{
+    /* background-color: red; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-fam1);
+    /* outline: 1px solid red; */
+    scroll-behavior: smooth;
+    
+}
+body{
+    position: relative;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+/*************************** Table of contents */
+/* *Navbar */
+
+/* * footer */
+
+
+
+/* ****************************** */
+/* *Extra tools */
+
+
+
+
+
+
+
+
+
+/* *************************Navbar************************ */
+header{
+    position: absolute;
+}
+/* *************************Hero section************************ */
+.hero{
+    background-color: var(--color-p);
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 100%;
+    height: 100vh;
+   
+    
+}
+.hero-text{
+    padding-top: 200px;
+    width: 50%;
+    height: 100vh;
+}
+.hero-img{
+    position: relative;
+    
+    pointer-events: none;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+.photo3d{
+    background: url("../img/3d.png");
+    /* width: 50%; */
+    height: 100vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+    transform: scale(var(--3d-size));
+    max-width: 50vw;
+    animation: rotate3d 20s linear infinite;
+    animation-delay: 0.5s;
+    position: relative;
+    right: 0;
+    /* border: 2px solid red; */
+ 
+
+}
+.circle{
+    position: absolute;
+    background:url("../img/circle.png");
+    height: 100vh;
+    width: fit-content;
+    background-size:contain ;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    animation: rotate3d 20s linear infinite;
+    animation-delay: 2.5s;
+}
+@keyframes rotate3d {
+ 0%{
+     transform: rotate(0deg) scale(var(--3d-size));
+    }   
+    50%{
+        transform: rotate(-180deg) scale(calc(var(--3d-size)*1.5));
+ }   
+    100%{
+        transform: rotate(-360deg) scale(var(--3d-size));
+ }   
+}
