@@ -6,8 +6,8 @@
     --color-p : #37d610;
     --color-p : #f03c72;
     --color-p : #ffc000 ;
-    --color-p : #dacbea;
-    --color-p : #fff;
+    --color-p :  #6e57e0;;
+    --color-white : #fff;
     /** Secondary Color */
     --color-s1 : #fff;
    
@@ -23,8 +23,10 @@
     /* .5rem = 8rem, 1rem = 16rem, 1.5rem = 24rem ... */
     --font-p: 14rem;
     --font-h3: 16rem;
+
     /* **** custom variable */
     --3d-size: 0.6;
+    --z-fixed: 100;
 }
 *{
     /* background-color: red; */
@@ -56,7 +58,17 @@ body{
 /* *Extra tools */
 
 
+/**========== Reussabel css  ==========*/
+.active_menu{
+    /* display: grid; */
+    bottom: 35rem;
+    background-color: var(--color-white);
+}
 
+
+.pad-t-80{
+    padding-top: 80px;
+}
 
 
 
@@ -64,14 +76,134 @@ body{
 
 
 /* *************************Navbar************************ */
-header{
+/* header{
     position: absolute;
+} */
+
+/* *****************************Navigation Bar*********************** */
+
+section .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* position: relative; */
+}
+nav ul{
+    flex-direction: row;
+    display: flex;
+    box-shadow: 0 0 20rem var(--color-bar);
+}
+
+nav ul li{
+    list-style: none;
+    padding: 10rem 10rem;
+    /* border: 1rem solid red; */
+    
+}
+nav ul li a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-color2);
+    font-size: var(--font-h2);
+}
+nav ul li a:hover{
+    color: var(--color-p);
+    cursor: pointer;
+    
+}
+nav ul li a h2{
+    font-size: var(--font-h2);
+}
+nav ul li a ion-icon{
+    font-size: var(--font-icon);
+}
+
+/* *********************************navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    
+    /* border: 1rem solid var(--font-color); */
+   
+}
+
+.navbar h2{
+    padding: 5rem 5rem 5rem 15rem;
+    font-size: var(--font-h2);
+}
+
+.navbar .apps{
+    padding: 5rem 10rem;
+    font-size: var(--font-icon);
+}
+
+.navbar .apps ion-icon{
+    cursor: pointer;
+    margin: 0 15rem;
+}
+#sun{
+    display: none;
+}
+#closeBtn{
+    display: none;
+}
+
+/* position botton for navbar  */
+@media screen and (min-width:746px) {
+    #app {
+        display: none;
+    }
+}
+@media screen and (max-width:745px) {
+    
+    /* * Show Menu  */
+    nav ul{
+        position: fixed;
+        bottom: -30%;
+        right: 0;
+        box-shadow: 0 0 20rem var(--color-s2);
+        background-color: var(--color-white);
+        border-radius: 20rem 20rem 0 0 ;
+        transition:0.5s;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 100%;
+        z-index: 10;
+        
+    }
+    /* * Show Navbar  */
+    .navbar{
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        background-color: var(--color-white);
+        z-index: var(--z-fixed);
+        box-shadow: 0 0  2rem var(--font-color);
+    }
+    
+}
+
+
 /* *************************Hero section************************ */
 .hero{
-    background-color: var(--color-p);
+    background-color: var(--color-white);
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     /* border: 1px solid black; */
     width: 100%;
     height: 100vh;
@@ -82,7 +214,8 @@ header{
     padding-top: 200px;
     padding-left: 20px;
     width: 50%;
-    height: 100vh;
+    /* height: 100vh; */
+    /* border: 1px solid black; */
 }
 .hero-text h1{
     font-size: 25px;
@@ -95,7 +228,7 @@ header{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-      /* border: 2px solid red; */
+      /* border: 1px solid red; */
       justify-content: center;
     align-content: center;
 }
@@ -137,8 +270,17 @@ header{
         transform: rotate(-360deg) scale(var(--3d-size));
  }   
 }
+@media screen and (max-width:745px) {
+    .hero{
+        flex-direction: column-reverse;
+    }
+    .hero-text{
+        min-width: 50%;
+        width: 500px;
+    }
+    .hero-img{
+        min-width: 50%;
+        width: 500px;
+    }
 
-/* Extra tools */
-.pad-t-80{
-    padding-top: 80px;
 }

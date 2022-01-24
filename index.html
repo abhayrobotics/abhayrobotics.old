@@ -8,6 +8,11 @@
 
     <!--* font icon -->
     <script src="https://kit.fontawesome.com/4e87116ff3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     <!-- * css -->
     <link rel="stylesheet" href="./asset/css/portfolio.css">
@@ -15,57 +20,66 @@
 </head>
 <body>
 
-    <!-- **  Header Section -->
-    <header>
-        <div class="navbar  glass-br">
-            <ul class="menu">
-
-                <li class="menu-item ">
-                    <a href="./" >
-                        <i class="fa fa-home">   </i> <span>Home</span>
-                    </a>
-                 </li>
-                <li class="menu-item">
-                    <a href="#">
-                        <i class="fa fa-sitemap"></i> <span>Services</span>
-                    </a>
-                 </li>
-                <li class="menu-item">
-                    <a href="#">
-                        <i class="fa fa-chart-bar"></i> <span>Skills</span>
-                    </a>
-                 </li>
-                <li class="menu-item">
-                    <a href="#portfolio">
-                        <i class="fa fa-briefcase"></i> <span>Portfolio</span>
-                    </a>
-                 </li>
-                <li class="menu-item">
-                    <a href="./Tools/calculator/calculator.html">
-                        <i class="fa fa-calculator"></i> <span>Calculator</span>
-                    </a>
-                 </li>
-                <li class="menu-item">
-                    <a href="#">
-                        <i class="fa fa-paper-plane"></i> <span>Contact</span>
-                    </a>
-                 </li>
-                <li class="menu-item">
-                    <a href="#">
-                        <i class="fa fa-user-circle"></i> <span>About</span>
-                    </a>
-                 </li>
-                
-            </ul>
-        </div>
-    </header>
     
-    <!-- **  Hero Section -->
+
+
+     <!-- * Navigation Menu************************************* -->
+     <section class="header ">
+        <nav>
+            <ul class="navigation" id="navigation" onclick="closeMenu()">
+                <li class="menu">
+                    <a href="#home">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <h2>Home</h2>
+                    </a>
+                </li>
+                <li class="menu"><a href="#about">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <h2>About</h2>
+                    </a></li>
+                <li class="menu"><a href="#skills">
+                        <ion-icon name="code-outline"></ion-icon>
+                        <h2>Skills</h2>
+                    </a></li>
+                <li class="menu"><a href="./Tools/calculator/calculator.html">
+                        <ion-icon name="briefcase-outline"></ion-icon>
+                        <h2>Calculator</h2>
+                    </a></li>
+                <li class="menu"><a href="#portfolio">
+                        <ion-icon name="image-outline"></ion-icon>
+                        
+                        <h2>Portfolio</h2>
+                    </a></li>
+                <li class="menu"><a href="#contact">
+                        <ion-icon name="send-outline"></ion-icon>
+                        <h2>Contact</h2>
+                    </a></li>
+            </ul>
+
+            <!--*************************** Navbar -->
+            <div class="navbar">
+                <h2>Abhay Kumar</h2>
+                <div class="apps">
+
+                    <!-- <ion-icon class="" name="moon-outline" onclick="themeMoon()" id="moon"></ion-icon>
+                    
+                    <ion-icon name="sunny-outline" onclick="themeSun()" id="sun"></ion-icon>
+                     -->
+
+                    <ion-icon onclick="openMenu()" name="apps-outline" id="app"></ion-icon>
+                    <ion-icon onclick="closeMenu()" name="close-outline" id="closeBtn"></ion-icon>
+                </div>
+
+            </div>
+        </nav>
+    </section>
+   
+     <!-- **  Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Hello, My Name is Abhay Kumar.</h1>
-            <h3>A full-stack Web Developer. </h3>
-            <h3>Specialized in creating sleek  and premium UI/UX design.</h3>
+            <h1>Hello,</h1>
+            <h1> My Name is Abhay Kumar.  </h1>
+            <h3>A full-stack Web Developer, specialized in creating sleek and premium User Experience.</h3>
 
         </div>
         <div class="hero-img">
@@ -163,6 +177,34 @@
 
 
    <!-- ? JAVASCRIPT -->
+   <!-- **************************************Menu bar show************** -->
+   <script>
+ 
+let navigation = document.getElementById('navigation')
+let app = document.getElementById('app')
+let closeBtn = document.getElementById('closeBtn')
+
+// *********************show Menu
+function openMenu() {
+
+    navigation.classList.add('active_menu')
+
+    app.style.display = "none"
+    closeBtn.style.display = "inline-block"
+}
+
+// *******************Hide Menu
+function closeMenu() {
+
+    navigation.classList.remove('active_menu')
+
+    app.style.display = "inline-block"
+    closeBtn.style.display = "none"
+}
+
+
+   </script>
+   
     <!-- **photo sectiom filter -->
     <script>
         
