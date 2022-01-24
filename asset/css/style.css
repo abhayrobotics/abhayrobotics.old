@@ -7,6 +7,7 @@
     --color-p : #f03c72;
     --color-p : #ffc000 ;
     --color-p : #dacbea;
+    --color-p : #fff;
     /** Secondary Color */
     --color-s1 : #fff;
    
@@ -18,6 +19,10 @@
     --font-fam2: "open-sans";
     --icon-size : 30px;
 
+    /**========== Font and typography ==========*/
+    /* .5rem = 8rem, 1rem = 16rem, 1.5rem = 24rem ... */
+    --font-p: 14rem;
+    --font-h3: 16rem;
     /* **** custom variable */
     --3d-size: 0.6;
 }
@@ -31,10 +36,13 @@
     scroll-behavior: smooth;
     
 }
+html{
+    font-size: 1px;
+}
 body{
     position: relative;
-    font-size: 14px;
-    overflow: hidden;
+    font-size: 16rem;
+    /* overflow: hidden; */
 }
 
 /*************************** Table of contents */
@@ -64,7 +72,7 @@ header{
     background-color: var(--color-p);
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
     height: 100vh;
    
@@ -72,8 +80,12 @@ header{
 }
 .hero-text{
     padding-top: 200px;
+    padding-left: 20px;
     width: 50%;
     height: 100vh;
+}
+.hero-text h1{
+    font-size: 25px;
 }
 .hero-img{
     position: relative;
@@ -82,8 +94,8 @@ header{
     width: 50%;
     display: flex;
     flex-direction: column;
-    overflow-y: hidden;
-      border: 2px solid red;
+    overflow: hidden;
+      /* border: 2px solid red; */
       justify-content: center;
     align-content: center;
 }
@@ -99,7 +111,7 @@ header{
     animation-delay: 0.5s;
    
    
-    border: 2px solid red;
+    /* border: 2px solid red; */
  
 
 }
@@ -124,4 +136,9 @@ header{
     100%{
         transform: rotate(-360deg) scale(var(--3d-size));
  }   
+}
+
+/* Extra tools */
+.pad-t-80{
+    padding-top: 80px;
 }
