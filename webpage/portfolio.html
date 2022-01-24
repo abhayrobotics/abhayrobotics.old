@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../asset/css/portfolio.css">
+</head>
+<body>
+    <section class="projects">
+        <section class="photo-section pad-t-80">
+
+            <!-- *filter Buttons -->
+            <div class="filter-cat">
+                <ul>
+                    <li class="filter active" id="filter " onclick="filterOut('All')">All</li>
+                    <li class="filter " onclick="filterOut('Graphic')">Graphic</li>
+                    <li class="filter" onclick="filterOut('Photography')">Photography</li>
+                    <li class="filter" onclick="filterOut('Coding')">Coding</li>
+                    <li class="filter " onclick="filterOut('Branding')">Branding</li>
+                </ul>
+            </div>
+            <!-- * All photos -->
+            <div class="photos">
+                <div class="img">
+                    <a href="../project/project_1/index.html">
+                    <img class="filter_img Photography  project_img" src="../asset/img/alexa.png" alt="">
+                    <!-- <div class="img-desc">
+                        <h2>Project Title</h2>
+                        <h3 class="btn">Client Name</h3>
+                    </div> -->
+                    </a>
+
+                </div>
+                <div class="img">
+                    <a href="../project/project_2/index.html">
+                    <img class="filter_img Coding " src="../asset/img/portfolio.png" alt="">
+                    <!-- <div class="img-desc">
+                        <h2>Project Title</h2>
+                        <h3 class="btn">Client Name</h3>
+                    </div> -->
+                    </a>
+                </div>
+                <!-- <div class="img">
+                    <img class="filter_img Graphic " src="../asset/img/alexa.png" alt="">
+                    <div class="img-desc">
+                        <h2>Project Title</h2>
+                        <h3 class="btn">Client Name</h3>
+                    </div>
+                </div> -->
+                <!-- <div class="img">
+                    <img class="filter_img Photography " src="./img/4.jpg" alt="">
+                    <div class="img-desc">
+                        <h2>Project Title</h2>
+                        <h3 class="btn">Client Name</h3>
+                    </div>
+                </div>
+                <div class="img">
+                    <img class="filter_img Coding " src="./img/1.jpg" alt="">
+                    <div class="img-desc">
+                        <h2>Project Title</h2>
+                        <h3 class="btn">Client Name</h3>
+                    </div>
+                </div>
+                <div class="img">
+                    <img class="filter_img Branding " src="./img/6.jpg" alt="">
+                    <div class="img-desc">
+                        <h2>Project Title</h2>
+                        <h3 class="btn">Client Name</h3>
+                    </div>
+                </div>
+                <div class="img">
+                    <img class="filter_img Graphic " src="./img/7.jpg" alt="">
+                    <div class="img-desc">
+                        <h2>Project Title</h2>
+                        <h3 class="btn">Client Name</h3>
+                    </div>
+                </div>
+                <div class="img">
+                    <img class="filter_img Photography " src="./img/8.jpg" alt="">
+                    <div class="img-desc">
+                        <h2>Project Title</h2>
+                        <h3 class="btn">Client Name</h3>
+                    </div>
+                </div> -->
+    
+            </div>
+            <div class="btn pad-t-80"><a href="#"> View More <i class="fa fa-long-arrow-right"></i></a></div>
+    
+        </section>
+    </section>
+    <div class="project1 project">
+        <a href="../project/project_1/index.html">Alexa | Personal Portfolio</a>
+    </div>
+    <div class="project2 project">
+        <a href="../project/project_2/index.html">Alexa | Personal Portfolio</a>
+    </div>
+
+
+    <script>
+        
+// ********************************************photo sectiom filter
+function filterOut(cat){
+
+//* getting all elements having class +filter_img
+let filter_cat =document.getElementsByClassName('filter_img')
+// console.log(filter_cat)
+
+// * running loop for every element
+for(i=0;i<filter_cat.length;i++){
+    
+    //* hide all elements
+    filter_cat[i].style.display="none";
+  
+    let array_class
+    array_class = filter_cat[i].className.split(" ");
+    
+    
+    // *getting each class of 1 DOM element
+    for(j=0;j<array_class.length;j++){
+        
+        // *if class matches to filteres category, show
+        if(array_class[j]===cat){
+            filter_cat[i].style.display="inline-block"
+        }
+
+        // * Show all elements
+        if(cat=="All"){
+            filter_cat[i].style.display="block"
+        }
+    }
+    
+}
+// *Filter button color
+let filter_button =document.getElementsByClassName('filter')
+
+// loop through all elements
+for(i=0;i<filter_button.length;i++){
+    
+    // *remove underline from all category button 
+    filter_button[i].classList.remove('active')
+
+    let capitalize_catefgory =capitalize1(filter_button[i].innerText)
+    if(capitalize_catefgory == cat){
+
+        console.log(capitalize_catefgory,cat)
+        filter_button[i].classList.add('active')
+    }
+
+} 
+}
+    </script>
+</body>
+</html>
